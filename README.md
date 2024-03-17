@@ -10,10 +10,35 @@ This Python script enables automated scraping of job listings from Workable-powe
 - **Customizable**: Easily extendable to add more websites or adapt to changes in website structure.
 - **Clean Data Processing**: Automatically skips common introductory headings in job descriptions and requirements.
 
-## Usage
+## Example Usage
 
 To use the script, follow these steps:
 
 1. **Initialization**: Create an instance of the `ScrapeWorkable` class by passing a list of Workable website URLs you wish to scrape.
-   ```python
-   scraper = ScrapeWorkable(['https://apply.workable.com/caxton/', 'https://apply.workable.com/twinkl-ltd'])
+
+    ```python
+    scraper = WorkableJobScraper(['https://apply.workable.com/caxton/', 'https://apply.workable.com/twinkl-ltd'])
+    ```
+2. **Partial Scraping**: To perform a partial scrape, which collects basic job listing information, call the `partial_scrape` method.
+
+    ```python
+    partial_jobs = scraper.partial_scrape()
+    ```
+3. **Full Scraping**: For a comprehensive data collection that includes job descriptions, requirements, and benefits, call the `full_scrape` method. This method performs partial scraping if not already done and then proceeds with the detailed scraping.
+   
+    ```python
+    full_jobs_df = scraper.full_scrape()
+    ```
+    Optionally, you can set `save=True` to export the collected data to a CSV file.
+
+## Customization
+
+You can customize the scraping process by modifying the `headings` list in the `find_heading_index` method to skip over any additional common introductory headings you encounter.
+
+## Contributing
+
+Contributions to enhance the functionality, improve efficiency, or extend compatibility are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is open-source and available under the MIT License. See the LICENSE file for more details.
