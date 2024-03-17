@@ -10,12 +10,10 @@ This Python script enables automated scraping of job listings from Workable-powe
 - **Customizable**: Easily extendable to add more websites or adapt to changes in website structure.
 - **Clean Data Processing**: Automatically skips common introductory headings in job descriptions and requirements.
 
-## Installation
+## Usage
 
-Ensure you have Python installed on your system. This script was developed using Python 3.8+, and compatibility with earlier versions is not guaranteed.
+To use the script, follow these steps:
 
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Install the required dependencies:
-   ```sh
-   pip install -r requirements.txt
+1. **Initialization**: Create an instance of the `ScrapeWorkable` class by passing a list of Workable website URLs you wish to scrape.
+   ```python
+   scraper = ScrapeWorkable(['https://apply.workable.com/caxton/', 'https://apply.workable.com/twinkl-ltd'])
