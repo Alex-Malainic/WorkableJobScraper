@@ -1,1 +1,2 @@
-# WorkableScraper
+Workable Job Scraper
+This Python script enables automated scraping of job listings from Workable-powered websites, facilitating efficient data collection related to job opportunities. It allows for both partial and full scraping functionalities, where partial scraping fetches basic job listing details such as job titles, types, locations, and URLs, and full scraping extends this by also gathering detailed job descriptions, requirements, and benefits. The script is capable of handling multiple websites in parallel, significantly reducing the time required for data collection.
